@@ -40,11 +40,17 @@ strong
     text-align: center
     line-height: 45px
     +bold
+    @media (max-width: 768px)
+        font-size: 26px
+        line-height: auto
 .section-subtitle
     color: #000
     font-size: 20px
     text-align: center
     display: block
+
+
+
 
 .header
     padding: 20px 0
@@ -234,35 +240,53 @@ strong
     padding: 100px 0
     &__title
         margin-bottom: 60px
+        @media (max-width: 768px)
+            margin-bottom: 40px
     &__subtitle
         margin-bottom: 60px
+        @media (max-width: 768px)
+            margin-bottom: 50px
     &__card
         margin-bottom: 30px
 
 .cards
     display: flex
+    flex-direction: row
     flex-wrap: wrap
     justify-content: space-between
-
 .card
     text-align: center
     border: 1px solid $border-card
     transition: .2s
+    width: 32%
+    @media (max-width: 768px)
+        width: 48%
+    @media (max-width: 425px)
+        width: 100%
     &:hover
         box-shadow: 0 20px 25px rgba(0,0,0,0.1)
         .card__image::before
             opacity: 1
     &__text
+        display: inline-block
         padding: 40px
+        @media (max-width: 850px)
+            padding: 30px 20px
     &__title
-        max-width: 290px
+        display: flex
+        margin: 0 auto
         font-size: 18px
         color: #000
         margin-bottom: 30px
+        @media (max-width: 850px)
+            font-size: 16px
+            margin-bottom: 20px
     &__image
         position: relative
         img
             display: block
+            width: 100%
+            object-fit: cover
         &::before
             content: ''
             position: absolute
@@ -279,6 +303,8 @@ strong
         text-decoration: none
         color: $accent
         position: relative
+        @media (max-width: 850px)
+            font-size: 16px
         &:hover
             &::after
                 height: 13px
