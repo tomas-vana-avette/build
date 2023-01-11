@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+    new WOW().init();
+
     var button =  $('#button');
     var modal = $('#modal');
     var close = $('#close');
