@@ -148,7 +148,7 @@ strong
             max-width: 300px
             @media (max-width:640px)
                 font-size: 12px
-                max-width: 250px
+                max-width: 215px
 .offer
     padding: 90px 0
     background: url('../img/offer-bg.jpg') no-repeat
@@ -487,6 +487,109 @@ strong
             font-size: 16px
             line-height: 22px
             margin-top: 20px
+
+.brief
+    background-image: url(../img/brief-color-bg.jpg), url(../img/brief-bg.jpg)
+    background-position: left center, center right
+    background-size: 50%, cover
+    background-repeat: repeat-y, no-repeat
+    padding: 100px 0
+    @media (max-width: 768px)
+        background-image: url(../img/brief-color-bg.jpg), url(../img/brief-bg.jpg)
+        background-position: top center, center bottom
+        background-size: 100% 50%, cover
+        background-repeat: repeat-x, no-repeat
+        padding: 50px 0
+    &-block
+        display: flex
+        @media (max-width: 768px)
+            flex-direction: column
+    &__interview
+       flex-basis: 50%
+    &__form
+        flex-basis: 50%
+        padding-left: 200px
+        text-align: center
+        @media (max-width: 1200px)
+            padding-left: 30px
+        @media (max-width: 768px)
+            padding-left: 0
+    &__input
+        width: 100%
+        max-width: 370px
+        margin-bottom: 15px
+    &__button
+        width: 100%
+        max-width: 370px
+        display: block
+        height: 70px
+        margin: 15px auto 30px auto
+
+.interview
+    padding-right: 70px
+    @media (max-width: 1200px)
+        padding-right: 30px
+    &__title
+        +bold
+        font-size: 22px
+        line-height: 33px
+        margin-bottom: 50px
+        @media (max-width: 1200px)
+            font-size: 18px
+            margin-bottom: 40px
+    &__subtitle
+        font-size: 16px
+        margin-bottom: 100px
+        display: block
+        @media (max-width: 1200px)
+            font-size: 14px
+            margin-bottom: 30px
+    &-list
+        list-style-type: none
+        padding: 0
+        &__item
+            display: flex
+            align-items: center
+            margin-bottom: 25px
+            +bold
+        &__counter
+            width: 35px
+            height: 35px
+            border: 2px solid $black
+            display: inline-block
+            text-align: center
+            line-height: 35px
+            border-radius: 50%
+            margin-right: 30px
+            font-size: 14px
+            @media (max-width: 1200px)
+                margin-right: 20px
+        &__text
+            max-width: 400px
+            font-size: 18px
+            @media (max-width: 1200px)
+                font-size: 14px
+                max-width: 200px
+
+.form
+    &__title
+        +bold
+        font-size: 22px
+        line-height: 33px
+        margin-bottom: 50px
+        @media (max-width: 1200px)
+            font-size: 18px
+            margin-bottom: 40px
+            margin-top: 150px
+    &__subtitle
+        font-size: 16px
+        margin-bottom: 50px
+        display: block
+        @media (max-width: 1200px)
+            font-size: 14px
+            margin-bottom: 40px
+    &__description
+        font-size: 15px
 
 .modal
     position: fixed
