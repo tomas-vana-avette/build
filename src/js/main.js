@@ -14,6 +14,19 @@ $(document).ready(function(){
         modal.removeClass('modal_active');
     });
 
+    $('#brief-form').validate({
+        rules:{
+            name: "required",
+            phone: "required",
+            email: {required: true, email: true},
+        },
+        messages: {
+            name: "Uveďte Vaše jméno",
+            phone: "Uveďte Vaše telefonní číslo", 
+            email: "Zadejte platnou e-mailovou adresu",
+        }
+    });
+
     $('.slider').slick({
         slidesToShow: 3,
         prevArrow: $('.arrows__left'),

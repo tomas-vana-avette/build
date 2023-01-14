@@ -1024,4 +1024,22 @@ strong {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto 10px auto;
+  align-text: center;
+  border: 2px solid red;
+}
+
+label.error {
+  display: block;
+  padding-bottom: 10px;
+  border: none;
 }/*# sourceMappingURL=style.css.map */
